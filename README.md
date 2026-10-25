@@ -12,9 +12,16 @@ This project is planned as a physical ARC-186 COMM-VHF radio panel for my DCS A-
 
 This repository is a placeholder while I work on my other radio projects. There is no firmware or finished hardware design available here yet, and I have not set a release date.
 
-I am exploring using the controller inside the [ARC-164 panel](https://github.com/dgdimick/ARC-164-DCS-Display) to run both radios, with a plug-in cable connecting the panels. I also plan to document a standalone version with its own controller and USB connection. Both options are proposed designs; the wiring and hardware requirements are still being investigated.
-
 As development progresses, I will share build notes, schematics, firmware, parts lists, and photos here.
+
+## One controller or two?
+
+I’m considering two ways to connect the ARC-186 and [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display):
+
+- **One shared controller:** Use the Teensy inside the ARC-164 to handle both radios through DCS-BIOS, with a plug-in cable connecting the ARC-186 to it. This could reduce the number of controllers and USB connections needed and help keep the combined build cost down.
+- **Separate controllers:** Give each radio its own controller and USB connection. This would let you build and use either radio independently, without needing the other panel, and keep each radio’s wiring and firmware separate.
+
+My aim is to document both arrangements so builders can choose what suits their cockpit. I’m still investigating the available pins, display connections, cable and connector requirements, and firmware for the shared-controller option. Neither arrangement is finalized yet, and any cost savings remain to be confirmed. I’ll share the details here as the designs develop.
 
 ## Related projects
 
