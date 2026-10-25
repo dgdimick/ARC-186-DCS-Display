@@ -21,6 +21,10 @@ As development progresses, I will share build notes, schematics, firmware, parts
 - [ARC-210 DCS Display](https://github.com/dgdimick/ARC-210-DCS-Display)
 - [ARC-164 DCS Display](https://github.com/dgdimick/ARC-164-DCS-Display)
 
+## Questions and community builds
+
+Visit [GitHub Discussions](https://github.com/dgdimick/ARC-186-DCS-Display/discussions) to ask questions, share ideas, and post photos of your build. Whether you’re planning your panel or already working on it, you’re welcome to join in!
+
 ## PC Flights affiliation
 
 I am not affiliated with PC Flights. I simply chose to use their panels for my own cockpit projects.
