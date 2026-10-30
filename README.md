@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 3:04 AM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 3:33 AM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -45,6 +45,14 @@ The preliminary ARC-186 budget is **19 signal pins**: 10 for five encoders, 3 an
 The earlier Nano pin assignments have been removed. **Teensy pin assignments will be established during the schematic design**; this is not a Nano pin-for-pin substitution. Teensy 4.1 uses **3.3 V logic and is not 5 V tolerant**. The proposed 5 V MAX7219 display drivers require suitable logic-level buffering, and the volume potentiometer and switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
 
 Before finalizing the PCB, I will verify DCS-BIOS communication, all five encoders, rotary-switch analog readings, display updates, and the display power budget together. The display arrangement and pin budget remain proposed and untested. Firmware will map this single panel to the appropriate AM or FM radio.
+
+## Why I keep using Teensy 4.1s
+
+I’m using a Teensy 4.1 in each radio to keep the controller hardware and programming workflow consistent across the ARC-210, ARC-164, and ARC-186 projects. Each panel gets its own controller and USB connection, so it can be built and operated independently. Pin assignments and firmware will still be specific to each radio.
+
+The Teensy 4.1 offers 42 readily accessible I/O pins and a 600 MHz processor, leaving room for controls, display updates, and future additions. Classic Arduino Uno and Mega boards run at 16 MHz. See [why I chose the Teensy 4.1](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-Teensy.md) for the detailed comparison; clock speed alone does not determine display refresh performance.
+
+I considered a classic Arduino Nano for the ARC-186, but the genuine Nano was listed at $25.70 versus $29.60 for the Teensy 4.1 without Ethernet—a difference of only **$3.90**, before shipping and tax, at the October 30, 2026 price check. For that small difference, I prefer the extra capacity and consistency of the Teensy. The [ARC-186 controller comparison](https://github.com/dgdimick/ARC-186-DCS-Display#controller-cost-comparison) lists the options and supplier links. Ethernet is not needed for the planned USB DCS-BIOS connections.
 
 ## Related projects
 
