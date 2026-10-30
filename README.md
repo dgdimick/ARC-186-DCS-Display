@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 4:12 AM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 5:26 AM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -45,6 +45,12 @@ The preliminary ARC-186 budget is **19 signal pins**: 10 for five encoders, 3 an
 The earlier Nano pin assignments have been removed. **Teensy pin assignments will be established during the schematic design**; this is not a Nano pin-for-pin substitution. Teensy 4.1 uses **3.3 V logic and is not 5 V tolerant**. The proposed 5 V MAX7219 display drivers require suitable logic-level buffering, and the volume potentiometer and switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
 
 Before finalizing the PCB, I will verify DCS-BIOS communication, all five encoders, rotary-switch analog readings, display updates, and the display power budget together. The display arrangement and pin budget remain proposed and untested. Firmware will map this single panel to the appropriate AM or FM radio.
+
+## Why USB instead of RS-485
+
+The **ARC-210, ARC-164, and ARC-186 will each use a dedicated Teensy 4.1 with its own USB connection to DCS-BIOS**. Three USB connections are manageable, and each radio can be built, tested, updated, and troubleshot independently.
+
+RS-485 can reduce USB ports and COM-port connections when many cockpit panels share a communication bus, but it adds transceiver hardware, bus wiring, termination, addressing, and a master interface. For these three radios, separate USB connections keep assembly and setup simpler. **USB remains the planned connection for each radio.**
 
 ## Why I keep using Teensy 4.1s
 
