@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 5:35 AM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 5:36 AM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -51,6 +51,10 @@ Before finalizing the PCB, I will verify DCS-BIOS communication, all five encode
 The **ARC-210, ARC-164, and ARC-186 will each use a dedicated Teensy 4.1 with its own USB connection to DCS-BIOS**. Three USB connections are manageable, and each radio can be built, tested, updated, and troubleshot independently.
 
 RS-485 can reduce USB ports and COM-port connections when many cockpit panels share a communication bus, but it adds transceiver hardware, bus wiring, termination, addressing, and a master interface. For these three radios, separate USB connections keep assembly and setup simpler. **USB remains the planned connection for each radio.**
+
+**Powered USB hubs are the preferred expansion approach for this cockpit.** They allow multiple Teensy controllers to share the PC's USB connections, preserve header GPIO pins, and work with the planned USB DCS-BIOS firmware. Each controller can still be tested, updated, and troubleshot independently, without adding RS-485 transceivers, bus termination, addressing, or a master interface. One Teensy can serve several smaller panels, so the number of cockpit panels or DCS-BIOS categories does not determine the number of USB devices.
+
+Where practical, connect several powered hubs directly to the PC and keep any hub daisy-chaining short. Choose hubs and power supplies with enough capacity for the connected controllers and displays; higher-current lighting and other loads may need separate power.
 
 **RS-485 would normally use three GPIO pins per controller: hardware-serial TX, RX, and a transmit/receive direction-control pin. USB uses no header GPIO pins, leaving those connections available for controls and displays.** On a Teensy 4.1, that means 42 readily accessible I/O pins remain available with USB, compared with 39 after allocating three pins to RS-485, before accounting for the panel's other connections.
 
