@@ -14,37 +14,32 @@ This repository is a placeholder while I work on my other radio projects. There 
 
 As development progresses, I will share build notes, schematics, firmware, parts lists, and photos here.
 
-## Controller plan — separate controllers
+## Controller plan — separate Teensy 4.1 controllers
 
-The plan is to use a **classic 5 V Arduino Nano with an ATmega328P for the ARC-186**, while keeping the **Teensy 4.1 dedicated to the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display)**. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently. This replaces the earlier shared-controller proposal.
+The plan is to use a **dedicated Teensy 4.1 for the ARC-186**, with another **Teensy 4.1 dedicated to the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display)**. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently. This replaces the earlier shared-controller and Arduino Nano proposals.
 
-The Nano pin budget fits one ARC-186 panel using four frequency encoders, one preset-channel encoder, resistor ladders for the two rotary switches, and a daisy-chained MAX7219 LED display arrangement. The count is **19 signal pins, leaving one spare** after reserving D0/D1 for serial communication. Power and ground connections are additional to this signal-pin count.
+### Controller cost comparison
 
-### Proposed Nano pin assignments
+Reference prices checked **October 30, 2026**, in **USD per board, before shipping and tax**:
 
-These assignments apply to the **classic ATmega328P Nano**, not other Nano-family boards. See the [official Nano pinout](https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf).
+| Controller | Quantity for ARC-186 | Listed price | Supplier |
+| --- | ---: | ---: | --- |
+| Classic Arduino Nano, ATmega328P — considered, not selected | 1 | $25.70 | [DigiKey](https://www.digikey.com/en/products/detail/arduino/A000005/2638989) |
+| Teensy 4.1 without Ethernet | 1 | $29.60 | [SparkFun](https://www.sparkfun.com/development-boards/microcontrollers/teensy/teensy-boards.html) |
+| Teensy 4.1, standard, without soldered headers | 1 | $31.50 | [SparkFun](https://www.sparkfun.com/development-boards/microcontrollers/teensy/teensy-boards.html) |
+| Teensy 4.1 with soldered headers | 1 | $35.95 | [SparkFun](https://www.sparkfun.com/development-boards/microcontrollers/teensy/teensy-boards.html) |
 
-| Function | Nano pins | Connection |
-| --- | --- | --- |
-| Frequency encoder 1 | D2, D3 | A/B signals |
-| Frequency encoder 2 | D4, D5 | A/B signals |
-| Frequency encoder 3 | D6, D7 | A/B signals |
-| Frequency encoder 4 | D8, D9 | A/B signals |
-| Preset-channel encoder | A0, A1 | Used as digital inputs for A/B signals |
-| Display LOAD/CS | D10 | Shared MAX7219 chain |
-| Display data | D11 | MAX7219 DIN |
-| LOAD button | D12 | Digital input |
-| Display clock | D13 | MAX7219 CLK |
-| Squelch control | A2, A3 | Digital inputs; reserves support for three positions |
-| Volume potentiometer | A4 | Analog input |
-| **Spare** | **A5** | Available for a future function |
-| Mode rotary-switch resistor ladder | A6 | Analog-only input |
-| Frequency/emergency rotary-switch resistor ladder | A7 | Analog-only input |
-| DCS-BIOS serial — reserved | D0/RX, D1/TX | Leave free of panel controls for USB serial communication |
+These are alternative controller options, **not quantities to purchase together**. Unsoldered versions may need separately purchased headers and sockets. Prices can change, and this table is a controller comparison rather than a complete panel build estimate.
 
-A6 and A7 are analog-only pins and are allocated to resistor ladders accordingly. Multiple MAX7219 drivers can use the same three-wire chain. Encoder push switches and backlighting control are **not included** in this budget.
+The Teensy 4.1 without Ethernet costs only **$3.90 more than the genuine Nano** at these prices. That small difference makes the Teensy's additional I/O capacity, processing headroom, and consistency with the ARC-210 and ARC-164 projects worthwhile. Ethernet is not required for the planned USB DCS-BIOS connection.
 
-The controller choice is the current plan; the pin assignments and MAX7219 display arrangement remain **proposed and untested**. Before finalizing the PCB, I will verify DCS-BIOS communication, all five encoders, rotary-switch analog readings, display updates, and the display power budget together. Firmware will map this single panel to the appropriate AM or FM radio.
+### Pin budget and electrical plan
+
+The preliminary ARC-186 budget is **19 signal pins**: 10 for five encoders, 3 analog inputs for two rotary-switch resistor ladders and volume, 3 for LOAD and a three-position squelch control, and 3 for a daisy-chained MAX7219 display arrangement. Against the Teensy 4.1's **42 readily accessible I/O pins**, that leaves **23 spare**. Analog inputs are included in those 42 pins; USB communication does not consume header GPIO pins. Encoder push switches and backlighting control are not included in this budget.
+
+The earlier Nano pin assignments have been removed. **Teensy pin assignments will be established during the schematic design**; this is not a Nano pin-for-pin substitution. Teensy 4.1 uses **3.3 V logic and is not 5 V tolerant**. The proposed 5 V MAX7219 display drivers require suitable logic-level buffering, and the volume potentiometer and switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
+
+Before finalizing the PCB, I will verify DCS-BIOS communication, all five encoders, rotary-switch analog readings, display updates, and the display power budget together. The display arrangement and pin budget remain proposed and untested. Firmware will map this single panel to the appropriate AM or FM radio.
 
 ## Related projects
 
