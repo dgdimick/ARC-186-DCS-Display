@@ -14,14 +14,37 @@ This repository is a placeholder while I work on my other radio projects. There 
 
 As development progresses, I will share build notes, schematics, firmware, parts lists, and photos here.
 
-## One controller or two?
+## Controller plan — separate controllers
 
-I’m considering two ways to connect the ARC-186 and [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display):
+The plan is to use a **classic 5 V Arduino Nano with an ATmega328P for the ARC-186**, while keeping the **Teensy 4.1 dedicated to the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display)**. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently. This replaces the earlier shared-controller proposal.
 
-- **One shared controller:** Use the Teensy inside the ARC-164 to handle both radios through DCS-BIOS, with a plug-in cable connecting the ARC-186 to it. This could reduce the number of controllers and USB connections needed and help keep the combined build cost down.
-- **Separate controllers:** Give each radio its own controller and USB connection. This would let you build and use either radio independently, without needing the other panel, and keep each radio’s wiring and firmware separate.
+The Nano pin budget fits one ARC-186 panel using four frequency encoders, one preset-channel encoder, resistor ladders for the two rotary switches, and a daisy-chained MAX7219 LED display arrangement. The count is **19 signal pins, leaving one spare** after reserving D0/D1 for serial communication. Power and ground connections are additional to this signal-pin count.
 
-My aim is to document both arrangements so builders can choose what suits their cockpit. I’m still investigating the available pins, display connections, cable and connector requirements, and firmware for the shared-controller option. Neither arrangement is finalized yet, and any cost savings remain to be confirmed. I’ll share the details here as the designs develop.
+### Proposed Nano pin assignments
+
+These assignments apply to the **classic ATmega328P Nano**, not other Nano-family boards. See the [official Nano pinout](https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf).
+
+| Function | Nano pins | Connection |
+| --- | --- | --- |
+| Frequency encoder 1 | D2, D3 | A/B signals |
+| Frequency encoder 2 | D4, D5 | A/B signals |
+| Frequency encoder 3 | D6, D7 | A/B signals |
+| Frequency encoder 4 | D8, D9 | A/B signals |
+| Preset-channel encoder | A0, A1 | Used as digital inputs for A/B signals |
+| Display LOAD/CS | D10 | Shared MAX7219 chain |
+| Display data | D11 | MAX7219 DIN |
+| LOAD button | D12 | Digital input |
+| Display clock | D13 | MAX7219 CLK |
+| Squelch control | A2, A3 | Digital inputs; reserves support for three positions |
+| Volume potentiometer | A4 | Analog input |
+| **Spare** | **A5** | Available for a future function |
+| Mode rotary-switch resistor ladder | A6 | Analog-only input |
+| Frequency/emergency rotary-switch resistor ladder | A7 | Analog-only input |
+| DCS-BIOS serial — reserved | D0/RX, D1/TX | Leave free of panel controls for USB serial communication |
+
+A6 and A7 are analog-only pins and are allocated to resistor ladders accordingly. Multiple MAX7219 drivers can use the same three-wire chain. Encoder push switches and backlighting control are **not included** in this budget.
+
+The controller choice is the current plan; the pin assignments and MAX7219 display arrangement remain **proposed and untested**. Before finalizing the PCB, I will verify DCS-BIOS communication, all five encoders, rotary-switch analog readings, display updates, and the display power budget together. Firmware will map this single panel to the appropriate AM or FM radio.
 
 ## Related projects
 
