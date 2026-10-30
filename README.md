@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 5:36 AM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 5:39 AM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -59,6 +59,15 @@ Where practical, connect several powered hubs directly to the PC and keep any hu
 **RS-485 would normally use three GPIO pins per controller: hardware-serial TX, RX, and a transmit/receive direction-control pin. USB uses no header GPIO pins, leaving those connections available for controls and displays.** On a Teensy 4.1, that means 42 readily accessible I/O pins remain available with USB, compared with 39 after allocating three pins to RS-485, before accounting for the panel's other connections.
 
 **One Teensy can also run multiple smaller panels through a single USB connection**, provided their combined pin count, processing needs, and power requirements fit within the controller's limits. Nearby panels can share a controller when the wiring is practical, so future expansion does not require a separate USB connection for every panel. The current radio plan remains unchanged: the ARC-210, ARC-164, and ARC-186 will each have their own dedicated Teensy 4.1.
+
+### USB hubs purchased for this cockpit
+
+I have purchased the following powered USB hubs and plan to use them for the **ARC-210, ARC-164, and ARC-186 radio panels, along with future cockpit panels**:
+
+- [RSHTECH RSH-ST10C-6 powered 10-port USB hub](https://www.amazon.com/dp/B0DX6KR79L) — six USB-C ports and four USB-A ports, with a listed 60 W power adapter.
+- [ACASIS powered 16-port USB hub](https://www.amazon.com/dp/B07G8S324L) — with a listed 96 W power adapter.
+
+Where practical, each hub will connect directly to the PC. The connected controllers and displays will share each hub's available power; completed-panel current draw and multi-panel operation still need to be tested. These are the hubs I have purchased for my build, rather than required purchases for other builders.
 
 ## Why I keep using Teensy 4.1s
 
