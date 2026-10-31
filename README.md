@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 9:09 PM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 9:22 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -87,6 +87,8 @@ References: [A-10C manual](https://www.digitalcombatsimulator.com/upload/iblock/
 - [ARC-164 DCS Display](https://github.com/dgdimick/ARC-164-DCS-Display)
 
 ## Questions and community builds
+
+**Planning a build?** Tell me which panel you’re interested in—even if you haven’t started yet. You’re welcome to post in [Discussions](https://github.com/dgdimick/ARC-186-DCS-Display/discussions).
 
 Visit [GitHub Discussions](https://github.com/dgdimick/ARC-186-DCS-Display/discussions) to ask questions, share ideas, and post photos of your build. Whether you’re planning your panel or already working on it, you’re welcome to join in!
 
