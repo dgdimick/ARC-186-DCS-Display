@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 9:48:47 PM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 10:30 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -16,6 +16,10 @@ This project is planned as a physical ARC-186 COMM-VHF radio panel for my DCS A-
 This repository is a placeholder while I work on my other radio projects. There is no firmware or finished hardware design available here yet, and I have not set a release date.
 
 As development progresses, I will share build notes, schematics, firmware, parts lists, and photos here.
+
+## Through-hole components
+
+While I could use surface-mount (SMD) parts to make the boards smaller, I plan to use through-hole components to make the project easier for everyone to build and solder with basic tools, following the same approach as my ARC-210 project.
 
 ## Things that need to be completed
 
