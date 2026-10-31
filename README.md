@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 12:23 AM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 12:28 AM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -22,6 +22,10 @@ As development progresses, I will share build notes, schematics, firmware, parts
 My current plan is to finish the **A-10C II (A-10C2) ARC-210 implementation**, then build and test the **ARC-164**, followed by the **ARC-186**. After those projects, I’ll return to additional aircraft support, starting with the **ARC-210 and C-130J**. I’m focusing on aircraft with a matching physical radio panel.
 
 **This order may change based on user feedback and interest.** These are my current priorities, not fixed release dates.
+
+## Other SIMPIT panels
+
+Once I’ve finished the radio panels, I plan to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans, and my priorities may change based on user feedback and interest.
 
 ## Through-hole components
 
