@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 9:22 PM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 9:24 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -16,6 +16,19 @@ This project is planned as a physical ARC-186 COMM-VHF radio panel for my DCS A-
 This repository is a placeholder while I work on my other radio projects. There is no firmware or finished hardware design available here yet, and I have not set a release date.
 
 As development progresses, I will share build notes, schematics, firmware, parts lists, and photos here.
+
+## Things that need to be completed
+
+This is my current work list. Hardware and firmware are still under development, and I haven’t set a release date.
+
+1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, display choices, and the complete parts list.
+2. **PCB and schematic design:** Design the controller, encoder, switch, and display circuitry, including the proposed display-driver level shifting. Finalize Teensy pin assignments and check the electrical design before ordering boards.
+3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
+4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct AM/FM radio instance and configuration. The ARC-210 changes do not automatically apply to this panel.
+5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
+6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
+7. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
+8. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes. Link to the shared [DCS-BIOS guide](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/DCS-BIOS.md) where the instructions already apply.
 
 ## Controller plan — separate Teensy 4.1 controllers
 
