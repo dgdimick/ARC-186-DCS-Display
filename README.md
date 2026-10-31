@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 9:24 PM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 9:28 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -18,6 +18,9 @@ This repository is a placeholder while I work on my other radio projects. There 
 As development progresses, I will share build notes, schematics, firmware, parts lists, and photos here.
 
 ## Things that need to be completed
+
+**Last updated: October 30, 2026 at 9:28 PM MDT (America/Denver)**
+<!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list. Hardware and firmware are still under development, and I haven’t set a release date.
 
