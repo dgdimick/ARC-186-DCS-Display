@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 10:30 PM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 11:14 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -13,7 +13,7 @@ This project is planned as a physical ARC-186 COMM-VHF radio panel for my DCS A-
 
 ## Project status
 
-This repository is a placeholder while I work on my other radio projects. There is no firmware or finished hardware design available here yet, and I have not set a release date.
+I’m using this page to share my plans as the project develops alongside my other radio builds. Firmware and the hardware design are still to come, and I’ll share a release date when I have one.
 
 As development progresses, I will share build notes, schematics, firmware, parts lists, and photos here.
 
@@ -90,7 +90,7 @@ Follow the guide before replacing files. The ARC-210 patch does not add support 
 
 ## Physical radio panels and possible future support
 
-Future support will focus on aircraft with a **physical ARC-186 control panel** that this hardware can reasonably represent. Merely installing the same transceiver, with operation through integrated avionics, is not sufficient.
+I’m focusing future support on aircraft with a **physical ARC-186 control panel** that matches my hardware, so the panel will be useful to builders flying those aircraft. I’ll compare the controls and displays as well as the radio model before deciding which aircraft to support.
 
 | Aircraft | Physical panel | Future-support assessment |
 | --- | --- | --- |
@@ -110,9 +110,7 @@ References: [A-10C manual](https://www.digitalcombatsimulator.com/upload/iblock/
 
 ## Questions and community builds
 
-**Planning a build?** Tell me which panel you’re interested in—even if you haven’t started yet. You’re welcome to post in [Discussions](https://github.com/dgdimick/ARC-186-DCS-Display/discussions).
-
-Visit [GitHub Discussions](https://github.com/dgdimick/ARC-186-DCS-Display/discussions) to ask questions, share ideas, and post photos of your build. Whether you’re planning your panel or already working on it, you’re welcome to join in!
+**Planning a build, already working on one, or just looking around?** Tell me which panel interests you and what you fly in [GitHub Discussions](https://github.com/dgdimick/ARC-186-DCS-Display/discussions). Questions, ideas, and progress photos are welcome—even if you haven’t started yet. If you get stuck, ask away—I’m happy to help where I can.
 
 ## PC Flights affiliation
 
