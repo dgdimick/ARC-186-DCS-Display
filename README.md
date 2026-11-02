@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 6:50 PM MST (America/Denver)**
+**Last updated: November 1, 2026 at 7:07 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -13,9 +13,7 @@ This project is planned as a physical ARC-186 COMM-VHF radio panel for my DCS A-
 
 ## Project status
 
-I’m using this page to share my plans as the project develops alongside my other radio builds. Firmware and the hardware design are still to come, and I’ll share a release date when I have one.
-
-As development progresses, I will share build notes, schematics, firmware, parts lists, and photos here.
+I’m sharing my plans here as the project develops alongside my other radio builds. Hardware and firmware design are still to come; I’ll add build notes, schematics, parts lists, firmware, and photos as I go. I haven’t set a release date.
 
 I chose the listed component suppliers because I’m aiming for better-quality parts than I generally expect from generic Amazon listings, even if they cost a little more. Parts from Amazon may work, and I use some myself, but substitutes may have different dimensions or pin spacing and may not fit the PCBs I designed for this project. Please compare the exact part specifications and PCB footprint before buying a substitute.
 
@@ -27,7 +25,7 @@ My current plan is to finish the **A-10C II (A-10C2) ARC-210 implementation**, t
 
 ## Other SIMPIT panels
 
-Once I’ve finished the radio panels, I plan to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans, and my priorities may change based on user feedback and interest.
+Once I’ve finished the radio panels, I plan to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans.
 
 ## Through-hole components
 
@@ -35,10 +33,10 @@ While I could use surface-mount (SMD) parts to make the boards smaller, I plan t
 
 ## Things that need to be completed
 
-**Last updated: November 1, 2026 at 4:23 AM MST (America/Denver)**
+**Last updated: November 1, 2026 at 7:07 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
-This is my current work list. Hardware and firmware are still under development, and I haven’t set a release date.
+This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, display choices, and the complete parts list.
 2. **PCB and schematic design:** Design the controller, encoder, switch, and display circuitry, including the proposed display-driver level shifting. Finalize Teensy pin assignments and check the electrical design before ordering boards.
@@ -53,7 +51,7 @@ This is my current work list. Hardware and firmware are still under development,
 
 ## Controller plan — separate Teensy 4.1 controllers
 
-The plan is to use a **dedicated Teensy 4.1 for the ARC-186**, with another **Teensy 4.1 dedicated to the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display)**. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently. This replaces the earlier shared-controller and Arduino Nano proposals.
+The plan is to use a **dedicated Teensy 4.1 for the ARC-186**, with another **Teensy 4.1 dedicated to the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display)**. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently.
 
 The **Teensy 4.1 runs at 600 MHz**, compared with **16 MHz for the classic Arduino Uno R3, Mega 2560, and ATmega328P Nano** — **37.5 times the CPU clock frequency**. This provides processing headroom for display updates and controls; it is not a measured 37.5-times improvement in display refresh speed. See the [Teensy specifications](https://www.pjrc.com/store/teensy41.html) and [classic Arduino board comparison](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-Teensy.md).
 
@@ -76,7 +74,7 @@ The Teensy 4.1 without Ethernet costs only **$3.90 more than the genuine Nano** 
 
 The preliminary ARC-186 budget is **19 signal pins**: 10 for five encoders, 3 analog inputs for two rotary-switch resistor ladders and volume, 3 for LOAD and a three-position squelch control, and 3 for a daisy-chained MAX7219 display arrangement. Against the Teensy 4.1's **42 readily accessible I/O pins**, that leaves **23 spare**. Analog inputs are included in those 42 pins; USB communication does not consume header GPIO pins. Encoder push switches and backlighting control are not included in this budget.
 
-The earlier Nano pin assignments have been removed. **Teensy pin assignments will be established during the schematic design**; this is not a Nano pin-for-pin substitution. Teensy 4.1 uses **3.3 V logic and is not 5 V tolerant**. The proposed 5 V MAX7219 display drivers require suitable logic-level buffering, and the volume potentiometer and switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
+**Teensy pin assignments will be established during the schematic design.** Teensy 4.1 uses **3.3 V logic and is not 5 V tolerant**. The proposed 5 V MAX7219 display drivers require suitable logic-level buffering, and the volume potentiometer and switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
 
 Before finalizing the PCB, I will verify DCS-BIOS communication, all five encoders, rotary-switch analog readings, display updates, and the display power budget together. The display arrangement and pin budget remain proposed and untested. Firmware will map this single panel to the appropriate AM or FM radio.
 
@@ -129,7 +127,7 @@ See my [ARC-210 PCB and printed-parts offers](https://github.com/dgdimick/ARC-21
 
 ## A central directory for SIMPIT builders
 
-I’d love to see a central GitHub directory linking to projects from SIMPIT builders like me—a place to find panels, code, PCB designs, printable parts, and build guides for SIMPITs of every size. It could link back to each builder’s own repository so the files, updates, and credit stay with the original project. This is an idea I’d like to see happen, rather than a project I’ve committed to building myself.
+I’d love to see a central GitHub directory linking to other SIMPIT builders’ projects, with files and credit staying with each builder. This is an idea, not a project I’ve committed to building.
 
 [Read more about the directory idea](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Future-Thoughts.md#a-central-directory-for-simpit-builders). If you know of one or would like to discuss it, let me know in [Discussions](https://github.com/dgdimick/ARC-186-DCS-Display/discussions).
 
