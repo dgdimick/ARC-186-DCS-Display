@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 7:25 PM MST (America/Denver)**
+**Last updated: November 1, 2026 at 7:32 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -115,6 +115,7 @@ References: [A-10C manual](https://www.digitalcombatsimulator.com/upload/iblock/
 
 ## Related projects
 
+- [A-10-Sim repository](https://github.com/dgdimick/A-10-Sim) — my collection of A-10C II cockpit panel projects.
 - [C-130J ARC-210 support in the main ARC-210 project](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/C-130J-Support.md) — planned reuse of my existing ARC-210 hardware with C-130J firmware, DCS-BIOS mappings, and menus. The same panel hardware should work with both the A-10C II and C-130J using the appropriate firmware and mappings; C-130J testing is pending.
 - [ARC-210 DCS Display](https://github.com/dgdimick/ARC-210-DCS-Display)
 - [ARC-164 DCS Display](https://github.com/dgdimick/ARC-164-DCS-Display)
