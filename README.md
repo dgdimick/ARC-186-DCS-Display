@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 10:43 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:06 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -51,7 +51,7 @@ This is my current work list for the hardware, firmware, testing, and build inst
 
 ## Assembly tool note
 
-I’ll keep a **13 mm deep socket** available for tightening the **rotary-switch shaft mounting nuts**. The deep socket provides clearance over the shafts while reaching the nuts; I’ll check it against the final selected hardware during assembly.
+I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on the rotary switches and encoders**. Use whichever socket fits each nut; the deep well provides clearance over the shaft.
 
 
 ## Controller plan — separate Teensy 4.1 controllers
