@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 7:32 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 10:43 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -47,6 +47,11 @@ This is my current work list for the hardware, firmware, testing, and build inst
 7. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
 8. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes. Link to the shared [DCS-BIOS guide](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/DCS-BIOS.md) where the instructions already apply.
 9. **Assembly pictures:** When my PCBs arrive and I start building, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
+
+
+## Assembly tool note
+
+I’ll keep a **13 mm deep socket** available for tightening the **rotary-switch shaft mounting nuts**. The deep socket provides clearance over the shafts while reaching the nuts; I’ll check it against the final selected hardware during assembly.
 
 
 ## Controller plan — separate Teensy 4.1 controllers
