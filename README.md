@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:06 PM MST (America/Denver)**
+**Last updated: November 4, 2026 at 5:29 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -154,3 +154,7 @@ I welcome bug reports from anyone using the project—**even tiny bugs are worth
 ## PC Flights affiliation
 
 I am not affiliated with PC Flights. I simply chose to use their panels for my own cockpit projects.
+
+---
+
+[**My Mission Statement — Why I Build and Share These Projects**](https://github.com/dgdimick/A-10-Sim/blob/master/Mission-Statement.md)
