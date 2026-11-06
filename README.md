@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 4, 2026 at 5:29 AM MST (America/Denver)**
+**Last updated: November 6, 2026 at 1:41 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -86,6 +86,18 @@ Before finalizing the PCB, I will verify DCS-BIOS communication, all five encode
 ## My SIMPIT and test computer
 
 [View my SIMPIT and test computer](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/My-SIMPIT-and-Test-Computer.md) for my computer configuration, monitors, and current USB setup. **This describes my own development and flight-simulation setup, not minimum requirements for the radio panels.**
+
+## Parts and supplier links
+
+### USB adapter cable
+
+Use **one USB-C-to-Micro-B data cable per panel** to connect the Teensy 4.1’s Micro-B device port to a computer or hub with a USB-C port. The linked option is a **1 ft (30.5 cm), male-to-male cable carrying both data and power**:
+
+[Amazon — USB-C-to-Micro-B adapter cable](https://www.amazon.com/dp/B0BD36TZBK)
+
+This replaces the standard USB Micro-B data cable when using a USB-C port; you only need one suitable USB data cable per panel. A charge-only cable will not carry DCS-BIOS communications or program the Teensy. Choose a length that suits your installation and check the current supplier price.
+
+The complete ARC-186 parts list and build cost are still being developed.
 
 ## USB connections and powered hubs
 
