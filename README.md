@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:44 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:46 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -60,7 +60,7 @@ I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on th
 
 ## Controller plan — Teensy 4.1 or classic Nano
 
-I am considering a **classic Nano V3.0 with an ATmega328P running at 16 MHz** for the ARC-186. I found an Amazon three-pack for **$15, or $5 per board**; this is my reported price, and I have not added a product link yet. The plan would use **resistor ladders for the seven rotary switches** to reduce the number of input pins.
+I am considering a **classic Nano V3.0 with an ATmega328P running at 16 MHz** for the ARC-186. I found an **Amazon-sourced Nano** three-pack for **$15, or $5 per board**. For builders, I recommend a **genuine Arduino Nano**, at about **$17 each**. These are my reported prices; check the current listing before ordering. I have not added product links for these options yet. The plan would use **resistor ladders for the seven rotary switches** to reduce the number of input pins.
 
 [DCS-BIOS explicitly supports the classic Nano](https://github.com/DCS-Skunkworks/dcs-bios/blob/main/Scripts/DCS-BIOS/doc/userguide.adoc), using `DCSBIOS_IRQ_SERIAL` for its ATmega328P. **I still need to compile and test the ARC-186 firmware**, check flash and SRAM usage, and test the controls and display updates together before committing the PCB design to it.
 
@@ -70,7 +70,7 @@ The **Teensy 4.1 runs at 600 MHz**, compared with **16 MHz for the classic Ardui
 
 ### Controller cost comparison
 
-The $5 Nano option above is a separate Amazon listing I am considering. The historical supplier comparison below was checked **October 30, 2026**, in **USD per board, before shipping and tax**:
+The $5 Amazon-sourced Nano and approximately $17 genuine Arduino Nano options above are separate from this older supplier comparison. The historical supplier comparison below was checked **October 30, 2026**, in **USD per board, before shipping and tax**:
 
 | Controller | Quantity for ARC-186 | Listed price | Supplier |
 | --- | ---: | ---: | --- |
