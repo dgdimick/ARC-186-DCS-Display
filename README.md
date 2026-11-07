@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 2:26 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 2:30 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -63,8 +63,6 @@ I plan to use a **genuine Arduino Nano, product code A000005**, for the ARC-186,
 [DCS-BIOS explicitly supports the classic Nano](https://github.com/DCS-Skunkworks/dcs-bios/blob/main/Scripts/DCS-BIOS/doc/userguide.adoc), using `DCSBIOS_IRQ_SERIAL` for its ATmega328P. **I still need to compile and test the ARC-186 firmware**, check flash and SRAM usage, and test the controls and display updates together before committing the PCB design to it.
 
 The **Teensy 4.1 remains an alternative**, and the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display) will retain its own Teensy 4.1. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently.
-
-The **Teensy 4.1 runs at 600 MHz**, compared with **16 MHz for the classic Arduino Uno R3, Mega 2560, and ATmega328P Nano** — **37.5 times the CPU clock frequency**. This provides processing headroom for display updates and controls; it is not a measured 37.5-times improvement in display refresh speed. See the [Teensy specifications](https://www.pjrc.com/store/teensy41.html) and [classic Arduino board comparison](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-Teensy.md).
 
 ### Arduino Nano specifications
 
