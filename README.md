@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 6, 2026 at 1:41 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:14 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -74,6 +74,10 @@ Reference prices checked **October 30, 2026**, in **USD per board, before shippi
 These are alternative controller options, **not quantities to purchase together**. Unsoldered versions may need separately purchased headers and sockets. Prices can change, and this table is a controller comparison rather than a complete panel build estimate.
 
 The Teensy 4.1 without Ethernet costs only **$3.90 more than the genuine Nano** at these prices. That small difference makes the Teensy's additional I/O capacity, processing headroom, and consistency with the ARC-210 and ARC-164 projects worthwhile. Ethernet is not required for the planned USB DCS-BIOS connection.
+
+### Display plan
+
+The ARC-186 will use **seven 7-segment LED displays in total**: five for the frequency and two for the preset channel.
 
 ### Pin budget and electrical plan
 
