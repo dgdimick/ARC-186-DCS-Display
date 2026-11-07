@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:23 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:24 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -87,7 +87,7 @@ The seven display digits will have their own **display PCB**. I may also be able
 
 My current control plan also includes rotary switches for **EMER, FM/AM, and OFF/TR/DF**. I can mount the **EMER and OFF/TR/DF switches directly to the faceplate**; the remaining mounting details still need checking.
 
-The preset channel control will use a **small 3D-printed channel wheel**. I am considering a horizontally mounted rotary encoder, but the wheel is very small and **I still need to figure out how to mount and couple it to the encoder**. I will measure the wheel opening and clearance behind the panel before choosing a direct shaft connection, separate axle, or geared arrangement.
+I would like to use a **small 3D-printed wheel for the preset channel control**, but **I may not be able to make it work in the available space**. The channel wheel is not a confirmed part of the design; if it proves impractical, I will need to find another way to select preset channels. I am considering a horizontally mounted rotary encoder, but the wheel is very small and **I still need to figure out how to mount and couple it to the encoder**. I will measure the wheel opening and clearance behind the panel before choosing a direct shaft connection, separate axle, or geared arrangement.
 
 These are preliminary plans. I will check the controls, board clearances, and printed parts together before publishing a build-ready design.
 
