@@ -128,11 +128,9 @@ Before finalizing the PCB, I will verify DCS-BIOS communication, the rotary enco
 
 ### USB adapter cable
 
-I plan to use **one Micro-USB (Micro-B)-to-USB-C data cable** to connect this panel to a computer or hub with a USB-C port. I checked the Nano board I am considering and confirmed that it has a **Micro-USB socket**, so this is the cable type I will use. This cable also fits the Teensy 4.1 alternative. The linked option is a **1 ft (30.5 cm), male-to-male cable carrying both data and power**:
+For the Nano option, I plan to use **one USB Mini-B-to-USB-C data cable**, with a Mini-B plug for the Nano and a USB-C plug for the computer or hub. The Nano board uses **Mini-USB, not Micro-USB**. I have removed the earlier Micro-B cable link because it does not fit this connector; a matching Mini-B cable product link still needs to be added.
 
-[Amazon — USB-C-to-Micro-B adapter cable](https://www.amazon.com/dp/B0BD36TZBK)
-
-This replaces the standard USB Micro-B data cable when using a USB-C port; you only need one suitable USB data cable per panel. A charge-only cable will not carry DCS-BIOS communications or program the controller. Choose a length that suits your installation and check the current supplier price.
+The cable must carry both data and power. A charge-only cable will not carry DCS-BIOS communications or program the controller. Choose a length that suits your installation. If I use the Teensy 4.1 alternative instead, it requires a Micro-B cable.
 
 The complete ARC-186 parts list and build cost are still being developed.
 
