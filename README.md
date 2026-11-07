@@ -128,7 +128,7 @@ Before finalizing the PCB, I will verify DCS-BIOS communication, the rotary enco
 
 ### USB adapter cable
 
-I plan to use **one Micro-USB (Micro-B)-to-USB-C data cable** to connect this panel to a computer or hub with a USB-C port. I will confirm that the exact Nano board I buy has a Micro-USB socket before ordering the cable; Nano V3.0 boards can have different USB connectors. This cable also fits the Teensy 4.1 alternative. The linked option is a **1 ft (30.5 cm), male-to-male cable carrying both data and power**:
+I plan to use **one Micro-USB (Micro-B)-to-USB-C data cable** to connect this panel to a computer or hub with a USB-C port. I checked the Nano board I am considering and confirmed that it has a **Micro-USB socket**, so this is the cable type I will use. This cable also fits the Teensy 4.1 alternative. The linked option is a **1 ft (30.5 cm), male-to-male cable carrying both data and power**:
 
 [Amazon — USB-C-to-Micro-B adapter cable](https://www.amazon.com/dp/B0BD36TZBK)
 
