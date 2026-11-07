@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 2:25 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 2:26 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -15,11 +15,13 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Project update — November 7, 2026
 
+I am waiting for the **ARC-210 and ARC-164 PCBs to arrive**, so I am now working on the **ARC-186**. I am using this time to plan the controls, displays, and PCB arrangement.
+
 I have requested the ARC-186 panel layout file from PC Flights. **Once I receive it, I will start the PCB design**, using the drawing to line up the controls, displays, and mounting holes and check the available clearances.
 
 ## Current development order
 
-My current plan is to finish the **A-10C II (A-10C2) ARC-210 implementation**, then build and test the **ARC-164**, followed by the **ARC-186**. After those projects, I’ll return to additional aircraft support, starting with the **ARC-210 and C-130J**. I’m focusing on aircraft with a matching physical radio panel.
+My overall build and testing order is the **A-10C II (A-10C2) ARC-210 implementation**, then the **ARC-164**, followed by the **ARC-186**. While I wait for the ARC-210 and ARC-164 PCBs, I am moving ahead with ARC-186 planning and design. After those projects, I’ll return to additional aircraft support, starting with the **ARC-210 and C-130J**. I’m focusing on aircraft with a matching physical radio panel.
 
 **This order may change based on user feedback and interest.** These are my current priorities, not fixed release dates.
 
