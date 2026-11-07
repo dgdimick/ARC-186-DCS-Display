@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:42 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:44 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -37,13 +37,13 @@ While I could use surface-mount (SMD) parts to make the boards smaller, I plan t
 
 ## Things that need to be completed
 
-**Last updated: November 1, 2026 at 7:07 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:44 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, display choices, and the complete parts list.
-2. **PCB and schematic design:** Design the controller, encoder, switch, and display circuitry, including the proposed display-driver level shifting. Finalize Teensy pin assignments and check the electrical design before ordering boards.
+2. **PCB and schematic design:** Design the controller, encoder, switch, and display circuitry, including any display-driver level shifting needed for the chosen controller. Finalize the controller pin assignments and check the electrical design before ordering boards.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct AM/FM radio instance and configuration. The ARC-210 changes do not automatically apply to this panel.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
@@ -128,11 +128,11 @@ Before finalizing the PCB, I will verify DCS-BIOS communication, the rotary enco
 
 ### USB adapter cable
 
-Use **one USB-C-to-Micro-B data cable per panel** to connect the Teensy 4.1’s Micro-B device port to a computer or hub with a USB-C port. The linked option is a **1 ft (30.5 cm), male-to-male cable carrying both data and power**:
+I plan to use **one Micro-USB (Micro-B)-to-USB-C data cable** to connect this panel to a computer or hub with a USB-C port. I will confirm that the exact Nano board I buy has a Micro-USB socket before ordering the cable; Nano V3.0 boards can have different USB connectors. This cable also fits the Teensy 4.1 alternative. The linked option is a **1 ft (30.5 cm), male-to-male cable carrying both data and power**:
 
 [Amazon — USB-C-to-Micro-B adapter cable](https://www.amazon.com/dp/B0BD36TZBK)
 
-This replaces the standard USB Micro-B data cable when using a USB-C port; you only need one suitable USB data cable per panel. A charge-only cable will not carry DCS-BIOS communications or program the Teensy. Choose a length that suits your installation and check the current supplier price.
+This replaces the standard USB Micro-B data cable when using a USB-C port; you only need one suitable USB data cable per panel. A charge-only cable will not carry DCS-BIOS communications or program the controller. Choose a length that suits your installation and check the current supplier price.
 
 The complete ARC-186 parts list and build cost are still being developed.
 
@@ -149,9 +149,9 @@ The complete ARC-186 parts list and build cost are still being developed.
 
 Follow the guide before replacing files. The ARC-210 patch does not add support for this planned radio.
 
-## Why I keep using Teensy 4.1s
+## Teensy 4.1 background
 
-[Read why I keep using Teensy 4.1s](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-I-Keep-Using-Teensy-4.1s.md) for the consistency, processing speed, available pins, and cost comparison behind the controller choice.
+[Read why I keep using Teensy 4.1s](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-I-Keep-Using-Teensy-4.1s.md) for background on my other radio projects and the Teensy alternative. The ARC-186 controller choice remains open while I evaluate the $5 Nano.
 
 ## Physical radio panels and possible future support
 
