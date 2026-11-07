@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:48 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 2:25 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -10,10 +10,6 @@
 *Panel reference photo: [PC Flights](https://pcflights.com/a-10c-thunderbolt-warthog-comm-vhf-panel/).*
 
 This project is planned as a physical ARC-186 COMM-VHF radio panel for my DCS A-10C II cockpit, with working controls and a display connected to DCS through DCS-BIOS.
-
-## Project status
-
-I’m sharing my plans here as the project develops alongside my other radio builds. Hardware and firmware design are still to come; I’ll add build notes, schematics, parts lists, firmware, and photos as I go. I haven’t set a release date.
 
 I chose the listed component suppliers because I’m aiming for better-quality parts than I generally expect from generic Amazon listings, even if they cost a little more. Parts from Amazon may work, and I use some myself, but substitutes may have different dimensions or pin spacing and may not fit the PCBs I plan to design for this project. Please compare the exact part specifications and PCB footprint before buying a substitute.
 
