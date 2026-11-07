@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:28 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:30 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -15,7 +15,7 @@ This project is planned as a physical ARC-186 COMM-VHF radio panel for my DCS A-
 
 I’m sharing my plans here as the project develops alongside my other radio builds. Hardware and firmware design are still to come; I’ll add build notes, schematics, parts lists, firmware, and photos as I go. I haven’t set a release date.
 
-I chose the listed component suppliers because I’m aiming for better-quality parts than I generally expect from generic Amazon listings, even if they cost a little more. Parts from Amazon may work, and I use some myself, but substitutes may have different dimensions or pin spacing and may not fit the PCBs I designed for this project. Please compare the exact part specifications and PCB footprint before buying a substitute.
+I chose the listed component suppliers because I’m aiming for better-quality parts than I generally expect from generic Amazon listings, even if they cost a little more. Parts from Amazon may work, and I use some myself, but substitutes may have different dimensions or pin spacing and may not fit the PCBs I plan to design for this project. Please compare the exact part specifications and PCB footprint before buying a substitute.
 
 ## Current development order
 
@@ -81,6 +81,17 @@ The ARC-186 will use **seven 7-segment LED displays in total**: five for the fre
 
 ### Control mounting and PCB plan
 
+My current control plan is:
+
+| Control | Quantity | Planned type |
+| --- | ---: | --- |
+| FREQ | 4 | Rotary switches |
+| EMER, FM/AM, and OFF/TR/DF | 3 | Rotary switches |
+| VOL | 1 | Rotary encoder |
+| Preset channel wheel | 1 proposed | Horizontal rotary encoder, only if the wheel and mounting prove workable |
+
+That is **seven planned rotary switches and one VOL encoder**, plus **one possible channel encoder**. This replaces the earlier five-frequency-encoder plan. The channel-wheel mechanism is still undecided, so I am not treating its encoder as a confirmed part yet.
+
 I plan to use **two separate PCBs for the four FREQ rotary switches**. This is the planned board arrangement for the frequency controls. I will probably also need **3D-printed shaft guides similar to those used on the ARC-210**. Their dimensions and mounting will be worked out during the fit checks. The switches can mount directly to the panel, but I still need to check clearance between the switch bodies, their two PCBs, and the frequency LED displays and display PCB before finalizing the layout.
 
 The seven display digits will have their own **display PCB**. I may also be able to mount the **VOL rotary encoder** on that board, depending on the available space and shaft alignment.
@@ -88,6 +99,8 @@ The seven display digits will have their own **display PCB**. I may also be able
 My current control plan also includes rotary switches for **EMER, FM/AM, and OFF/TR/DF**. I can mount the **EMER and OFF/TR/DF switches directly to the faceplate**; the remaining mounting details still need checking.
 
 I would like to use a **small 3D-printed wheel for the preset channel control**, but **I may not be able to make it work in the available space**. The channel wheel is not a confirmed part of the design; if it proves impractical, I will need to find another way to select preset channels. I am considering a horizontally mounted rotary encoder, but the wheel is very small and **I still need to figure out how to mount and couple it to the encoder**. I will measure the wheel opening and clearance behind the panel before choosing a direct shaft connection, separate axle, or geared arrangement.
+
+The current mechanical plan therefore includes **two FREQ switch PCBs and one separate display PCB**. This is not a final total for the complete radio: the controller, driver, and any other board requirements still need to be worked out.
 
 These are preliminary plans. I will check the controls, board clearances, and printed parts together before publishing a build-ready design.
 
