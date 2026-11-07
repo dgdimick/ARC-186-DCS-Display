@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:36 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:42 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -58,15 +58,19 @@ This is my current work list for the hardware, firmware, testing, and build inst
 I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on the rotary switches and encoders**. Use whichever socket fits each nut; the deep well provides clearance over the shaft.
 
 
-## Controller plan — separate Teensy 4.1 controllers
+## Controller plan — Teensy 4.1 or classic Nano
 
-The plan is to use a **dedicated Teensy 4.1 for the ARC-186**, with another **Teensy 4.1 dedicated to the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display)**. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently.
+I am considering a **classic Nano V3.0 with an ATmega328P running at 16 MHz** for the ARC-186. I found an Amazon three-pack for **$15, or $5 per board**; this is my reported price, and I have not added a product link yet. The plan would use **resistor ladders for the seven rotary switches** to reduce the number of input pins.
+
+[DCS-BIOS explicitly supports the classic Nano](https://github.com/DCS-Skunkworks/dcs-bios/blob/main/Scripts/DCS-BIOS/doc/userguide.adoc), using `DCSBIOS_IRQ_SERIAL` for its ATmega328P. **I still need to compile and test the ARC-186 firmware**, check flash and SRAM usage, and test the controls and display updates together before committing the PCB design to it.
+
+The **Teensy 4.1 remains an alternative**, and the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display) will retain its own Teensy 4.1. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently.
 
 The **Teensy 4.1 runs at 600 MHz**, compared with **16 MHz for the classic Arduino Uno R3, Mega 2560, and ATmega328P Nano** — **37.5 times the CPU clock frequency**. This provides processing headroom for display updates and controls; it is not a measured 37.5-times improvement in display refresh speed. See the [Teensy specifications](https://www.pjrc.com/store/teensy41.html) and [classic Arduino board comparison](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-Teensy.md).
 
 ### Controller cost comparison
 
-Reference prices checked **October 30, 2026**, in **USD per board, before shipping and tax**:
+The $5 Nano option above is a separate Amazon listing I am considering. The historical supplier comparison below was checked **October 30, 2026**, in **USD per board, before shipping and tax**:
 
 | Controller | Quantity for ARC-186 | Listed price | Supplier |
 | --- | ---: | ---: | --- |
@@ -77,7 +81,7 @@ Reference prices checked **October 30, 2026**, in **USD per board, before shippi
 
 These are alternative controller options, **not quantities to purchase together**. Unsoldered versions may need separately purchased headers and sockets. Prices can change, and this table is a controller comparison rather than a complete panel build estimate.
 
-The Teensy 4.1 without Ethernet costs only **$3.90 more than the genuine Nano** at these prices. That small difference makes the Teensy's additional I/O capacity, processing headroom, and consistency with the ARC-210 and ARC-164 projects worthwhile. Ethernet is not required for the planned USB DCS-BIOS connection.
+In that historical comparison, the Teensy 4.1 without Ethernet was $3.90 more than the genuine Nano. That comparison does not apply to the $5 Amazon Nano option now under consideration. I will choose the controller after testing the firmware and confirming the pin assignments. Ethernet is not required for the planned USB DCS-BIOS connection.
 
 ### Display plan
 
@@ -110,9 +114,9 @@ These are preliminary plans. I will check the controls, board clearances, and pr
 
 ### Pin budget and electrical plan
 
-The earlier 19-signal-pin estimate needs revising for the updated rotary-switch and encoder plan. I will confirm the complete control count, choose direct wiring or resistor ladders, and recalculate the pin budget during schematic design.
+The earlier 19-signal-pin estimate needs revising for the updated rotary-switch and encoder plan. I will confirm the complete control count, use resistor ladders for the Nano option, and recalculate the pin budget during schematic design.
 
-**Teensy pin assignments will be established during the schematic design.** Teensy 4.1 uses **3.3 V logic and is not 5 V tolerant**. The proposed 5 V MAX7219 display drivers require suitable logic-level buffering, and any switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
+**Pin assignments will be established during schematic design.** The classic Nano uses 5 V logic; its proposed resistor ladders will be designed for its ADC input range and reference. If I use the Teensy 4.1 instead, it uses **3.3 V logic and is not 5 V tolerant**: the 5 V MAX7219 display drivers need suitable logic-level buffering, and the switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
 
 Before finalizing the PCB, I will verify DCS-BIOS communication, the rotary encoders and switches, display updates, and the display power budget together. The display arrangement and pin budget remain proposed and untested. Firmware will map this single panel to the appropriate AM or FM radio.
 
