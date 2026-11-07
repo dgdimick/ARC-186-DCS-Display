@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:46 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:48 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -58,15 +58,40 @@ This is my current work list for the hardware, firmware, testing, and build inst
 I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on the rotary switches and encoders**. Use whichever socket fits each nut; the deep well provides clearance over the shaft.
 
 
-## Controller plan — Teensy 4.1 or classic Nano
+## Controller plan — genuine Arduino Nano
 
-I am considering a **classic Nano V3.0 with an ATmega328P running at 16 MHz** for the ARC-186. I found an **Amazon-sourced Nano** three-pack for **$15, or $5 per board**. For builders, I recommend a **genuine Arduino Nano**, at about **$17 each**. These are my reported prices; check the current listing before ordering. I have not added product links for these options yet. The plan would use **resistor ladders for the seven rotary switches** to reduce the number of input pins.
+I plan to use a **genuine Arduino Nano, product code A000005**, for the ARC-186, subject to firmware and bench testing. I found an **Amazon-sourced Nano** three-pack for **$15, or $5 per board**. For builders, I recommend a **genuine Arduino Nano**, at about **$17 each**. These are my reported prices; check the current listing before ordering. I have not added product links for these options yet. The plan would use **resistor ladders for the seven rotary switches** to reduce the number of input pins.
 
 [DCS-BIOS explicitly supports the classic Nano](https://github.com/DCS-Skunkworks/dcs-bios/blob/main/Scripts/DCS-BIOS/doc/userguide.adoc), using `DCSBIOS_IRQ_SERIAL` for its ATmega328P. **I still need to compile and test the ARC-186 firmware**, check flash and SRAM usage, and test the controls and display updates together before committing the PCB design to it.
 
 The **Teensy 4.1 remains an alternative**, and the [ARC-164](https://github.com/dgdimick/ARC-164-DCS-Display) will retain its own Teensy 4.1. Each radio will have its own USB connection to DCS-BIOS and can be built and operated independently.
 
 The **Teensy 4.1 runs at 600 MHz**, compared with **16 MHz for the classic Arduino Uno R3, Mega 2560, and ATmega328P Nano** — **37.5 times the CPU clock frequency**. This provides processing headroom for display updates and controls; it is not a measured 37.5-times improvement in display refresh speed. See the [Teensy specifications](https://www.pjrc.com/store/teensy41.html) and [classic Arduino board comparison](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-Teensy.md).
+
+### Arduino Nano specifications
+
+These are the specifications from Arduino for **A000005**, which I will use as the reference for the design. See the [Arduino Nano product page](https://store-usa.arduino.cc/products/arduino-nano).
+
+| Specification | Arduino A000005 |
+| --- | --- |
+| Microcontroller | ATmega328 |
+| Architecture | AVR |
+| Operating voltage | 5 V |
+| Flash memory | 32 KB, of which 2 KB is used by the bootloader |
+| SRAM | 2 KB |
+| Clock speed | 16 MHz |
+| Analog inputs | 8 |
+| EEPROM | 1 KB |
+| DC current per I/O pin | 20 mA |
+| Input voltage (VIN) | 7–12 V |
+| Digital I/O pins, as listed by Arduino | 22, including 6 PWM outputs |
+| PWM outputs | 6 |
+| Listed power consumption | 19 mA |
+| PCB dimensions | 18 × 45 mm |
+| Weight | 7 g |
+| Product code | A000005 |
+
+For the actual pin budget, I will use the [official Nano pinout](https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf): **A6 and A7 are analog-only**, and A0–A5 share analog and digital functions. The board exposes 20 digital-capable pins; analog and digital counts must not be added together as independent pins. I will reserve D0/D1 for serial communication. The 19 mA figure is for the Nano itself, not the complete radio or its LED displays.
 
 ### Controller cost comparison
 
@@ -81,7 +106,7 @@ The $5 Amazon-sourced Nano and approximately $17 genuine Arduino Nano options ab
 
 These are alternative controller options, **not quantities to purchase together**. Unsoldered versions may need separately purchased headers and sockets. Prices can change, and this table is a controller comparison rather than a complete panel build estimate.
 
-In that historical comparison, the Teensy 4.1 without Ethernet was $3.90 more than the genuine Nano. That comparison does not apply to the $5 Amazon Nano option now under consideration. I will choose the controller after testing the firmware and confirming the pin assignments. Ethernet is not required for the planned USB DCS-BIOS connection.
+In that historical comparison, the Teensy 4.1 without Ethernet was $3.90 more than the genuine Nano. That comparison does not apply to the $5 Amazon Nano option now under consideration. I will confirm the Nano choice by testing the firmware and pin assignments before finalizing the PCB. Ethernet is not required for the planned USB DCS-BIOS connection.
 
 ### Display plan
 
@@ -128,7 +153,7 @@ Before finalizing the PCB, I will verify DCS-BIOS communication, the rotary enco
 
 ### USB adapter cable
 
-For the Nano option, I plan to use **one USB Mini-B-to-USB-C data cable**, with a Mini-B plug for the Nano and a USB-C plug for the computer or hub. The Nano board uses **Mini-USB, not Micro-USB**. I have removed the earlier Micro-B cable link because it does not fit this connector; a matching Mini-B cable product link still needs to be added.
+For the planned Nano controller, I will use **one USB Mini-B-to-USB-C data cable**, with a Mini-B plug for the Nano and a USB-C plug for the computer or hub. The Nano board uses **Mini-USB, not Micro-USB**. I have removed the earlier Micro-B cable link because it does not fit this connector; a matching Mini-B cable product link still needs to be added.
 
 The cable must carry both data and power. A charge-only cable will not carry DCS-BIOS communications or program the controller. Choose a length that suits your installation. If I use the Teensy 4.1 alternative instead, it requires a Micro-B cable.
 
@@ -149,7 +174,7 @@ Follow the guide before replacing files. The ARC-210 patch does not add support 
 
 ## Teensy 4.1 background
 
-[Read why I keep using Teensy 4.1s](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-I-Keep-Using-Teensy-4.1s.md) for background on my other radio projects and the Teensy alternative. The ARC-186 controller choice remains open while I evaluate the $5 Nano.
+[Read why I keep using Teensy 4.1s](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-I-Keep-Using-Teensy-4.1s.md) for background on my other radio projects and the Teensy alternative. The genuine Arduino Nano is now the planned ARC-186 controller; the Teensy remains a fallback if testing shows it is needed.
 
 ## Physical radio panels and possible future support
 
