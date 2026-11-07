@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:27 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:28 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -81,7 +81,7 @@ The ARC-186 will use **seven 7-segment LED displays in total**: five for the fre
 
 ### Control mounting and PCB plan
 
-I plan to use **two separate PCBs for the four FREQ rotary switches**. This is the planned board arrangement for the frequency controls. The switches can mount directly to the panel, but I still need to check clearance between the switch bodies, their two PCBs, and the frequency LED displays and display PCB before finalizing the layout.
+I plan to use **two separate PCBs for the four FREQ rotary switches**. This is the planned board arrangement for the frequency controls. I will probably also need **3D-printed shaft guides similar to those used on the ARC-210**. Their dimensions and mounting will be worked out during the fit checks. The switches can mount directly to the panel, but I still need to check clearance between the switch bodies, their two PCBs, and the frequency LED displays and display PCB before finalizing the layout.
 
 The seven display digits will have their own **display PCB**. I may also be able to mount the **VOL rotary encoder** on that board, depending on the available space and shaft alignment.
 
