@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 2:30 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 2:36 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -58,7 +58,7 @@ I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on th
 
 ## Controller plan — genuine Arduino Nano
 
-I plan to use a **genuine Arduino Nano, product code A000005**, for the ARC-186, subject to firmware and bench testing. I found an **Amazon-sourced Nano** three-pack for **$15, or $5 per board**. For builders, I recommend a **genuine Arduino Nano**, at about **$17 each**. These are my reported prices; check the current listing before ordering. I have not added product links for these options yet. The plan would use **resistor ladders for the seven rotary switches** to reduce the number of input pins.
+I plan to use a **genuine Arduino Nano, product code A000005**, for the ARC-186, subject to firmware and bench testing. I found an **Amazon-sourced Nano** three-pack for **$15, or $5 per board**. For builders, I recommend a **genuine Arduino Nano**, at about **$17 each**. These are my reported prices; check the current listing before ordering. I have not added product links for these options yet. The plan would use **resistor ladders for the six rotary switches** to reduce the number of input pins.
 
 [DCS-BIOS explicitly supports the classic Nano](https://github.com/DCS-Skunkworks/dcs-bios/blob/main/Scripts/DCS-BIOS/doc/userguide.adoc), using `DCSBIOS_IRQ_SERIAL` for its ATmega328P. **I still need to compile and test the ARC-186 firmware**, check flash and SRAM usage, and test the controls and display updates together before committing the PCB design to it.
 
@@ -115,17 +115,17 @@ My current control plan is:
 | Control | Quantity | Planned type |
 | --- | ---: | --- |
 | FREQ | 4 | Rotary switches |
-| EMER, FM/AM, and OFF/TR/DF | 3 | Rotary switches |
+| EMER/FM/AM and OFF/TR/DF | 2 | Rotary switches |
 | VOL | 1 | Rotary encoder |
 | Preset channel wheel | 1 proposed | Horizontal rotary encoder, only if the wheel and mounting prove workable |
 
-That is **seven planned rotary switches and one VOL encoder**, plus **one possible channel encoder**. This replaces the earlier five-frequency-encoder plan. The channel-wheel mechanism is still undecided, so I am not treating its encoder as a confirmed part yet.
+That is **six planned rotary switches and one VOL encoder**, plus **one possible channel encoder**. This replaces the earlier five-frequency-encoder plan. The channel-wheel mechanism is still undecided, so I am not treating its encoder as a confirmed part yet.
 
 I plan to use **two separate PCBs for the four FREQ rotary switches**. This is the planned board arrangement for the frequency controls. I will probably also need **3D-printed shaft guides similar to those used on the ARC-210**. Their dimensions and mounting will be worked out during the fit checks. The switches can mount directly to the panel, but I still need to check clearance between the switch bodies, their two PCBs, and the frequency LED displays and display PCB before finalizing the layout.
 
 The seven display digits will have their own **display PCB**. I may also be able to mount the **VOL rotary encoder** on that board, depending on the available space and shaft alignment.
 
-My current control plan also includes rotary switches for **EMER, FM/AM, and OFF/TR/DF**. I can mount the **EMER and OFF/TR/DF switches directly to the faceplate**; the remaining mounting details still need checking.
+The other **two rotary switches** are the **EMER/FM/AM selector** and **OFF/TR/DF selector**. I can mount both directly to the faceplate; the remaining mounting details still need checking.
 
 I would like to use a **small 3D-printed wheel for the preset channel control**, but **I may not be able to make it work in the available space**. The channel wheel is not a confirmed part of the design; if it proves impractical, I will need to find another way to select preset channels. I am considering a horizontally mounted rotary encoder, but the wheel is very small and **I still need to figure out how to mount and couple it to the encoder**. I will measure the wheel opening and clearance behind the panel before choosing a direct shaft connection, separate axle, or geared arrangement.
 
