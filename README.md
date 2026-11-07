@@ -100,7 +100,7 @@ My current control plan also includes rotary switches for **EMER, FM/AM, and OFF
 
 I would like to use a **small 3D-printed wheel for the preset channel control**, but **I may not be able to make it work in the available space**. The channel wheel is not a confirmed part of the design; if it proves impractical, I will need to find another way to select preset channels. I am considering a horizontally mounted rotary encoder, but the wheel is very small and **I still need to figure out how to mount and couple it to the encoder**. I will measure the wheel opening and clearance behind the panel before choosing a direct shaft connection, separate axle, or geared arrangement.
 
-The current mechanical plan therefore includes **two FREQ switch PCBs and one separate display PCB**. This is not a final total for the complete radio: the controller, driver, and any other board requirements still need to be worked out.
+The current mechanical plan includes **two FREQ switch PCBs and one separate display PCB**. I may also need **another PCB for the channel control and other components**, depending on the available space and how the channel mechanism works out. Its contents and mounting are still undecided, and the channel wheel itself is not yet confirmed as workable. This is not a final board count for the complete radio: the controller, driver, and any other board requirements still need to be worked out.
 
 These are preliminary plans. I will check the controls, board clearances, and printed parts together before publishing a build-ready design.
 
