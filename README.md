@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:14 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:23 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -79,13 +79,25 @@ The Teensy 4.1 without Ethernet costs only **$3.90 more than the genuine Nano** 
 
 The ARC-186 will use **seven 7-segment LED displays in total**: five for the frequency and two for the preset channel.
 
+### Control mounting and PCB plan
+
+I plan to use **four rotary switches for the FREQ controls**, with **two PCBs for the frequency switches**. The faceplate holes are too small for the switches' threaded mounting bushings to pass through, so two switches may need modification. I still need to work out exactly what needs trimming and check the fit before finalizing the boards.
+
+The seven display digits will have their own **display PCB**. I may also be able to mount the **VOL rotary encoder** on that board, depending on the available space and shaft alignment.
+
+My current control plan also includes rotary switches for **EMER, FM/AM, and OFF/TR/DF**. I can mount the **EMER and OFF/TR/DF switches directly to the faceplate**; the remaining mounting details still need checking.
+
+The preset channel control will use a **small 3D-printed channel wheel**. I am considering a horizontally mounted rotary encoder, but the wheel is very small and **I still need to figure out how to mount and couple it to the encoder**. I will measure the wheel opening and clearance behind the panel before choosing a direct shaft connection, separate axle, or geared arrangement.
+
+These are preliminary plans. I will check the controls, board clearances, and printed parts together before publishing a build-ready design.
+
 ### Pin budget and electrical plan
 
-The preliminary ARC-186 budget is **19 signal pins**: 10 for five encoders, 3 analog inputs for two rotary-switch resistor ladders and volume, 3 for LOAD and a three-position squelch control, and 3 for a daisy-chained MAX7219 display arrangement. Against the Teensy 4.1's **42 readily accessible I/O pins**, that leaves **23 spare**. Analog inputs are included in those 42 pins; USB communication does not consume header GPIO pins. Encoder push switches and backlighting control are not included in this budget.
+The earlier 19-signal-pin estimate needs revising for the updated rotary-switch and encoder plan. I will confirm the complete control count, choose direct wiring or resistor ladders, and recalculate the pin budget during schematic design.
 
-**Teensy pin assignments will be established during the schematic design.** Teensy 4.1 uses **3.3 V logic and is not 5 V tolerant**. The proposed 5 V MAX7219 display drivers require suitable logic-level buffering, and the volume potentiometer and switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
+**Teensy pin assignments will be established during the schematic design.** Teensy 4.1 uses **3.3 V logic and is not 5 V tolerant**. The proposed 5 V MAX7219 display drivers require suitable logic-level buffering, and any switch resistor ladders must use 3.3 V. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
 
-Before finalizing the PCB, I will verify DCS-BIOS communication, all five encoders, rotary-switch analog readings, display updates, and the display power budget together. The display arrangement and pin budget remain proposed and untested. Firmware will map this single panel to the appropriate AM or FM radio.
+Before finalizing the PCB, I will verify DCS-BIOS communication, the rotary encoders and switches, display updates, and the display power budget together. The display arrangement and pin budget remain proposed and untested. Firmware will map this single panel to the appropriate AM or FM radio.
 
 ## My SIMPIT and test computer
 
