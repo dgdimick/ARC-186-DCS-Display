@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 2:40 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 2:43 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -173,6 +173,8 @@ Follow the guide before replacing files. The ARC-210 patch does not add support 
 [Read why I keep using Teensy 4.1s](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-I-Keep-Using-Teensy-4.1s.md) for background on my other radio projects and the Teensy alternative. The genuine Arduino Nano is now the planned ARC-186 controller; the Teensy remains a fallback if testing shows it is needed.
 
 ## Physical radio panels and possible future support
+
+Any work on additional ARC-186 aircraft support would come **after I finish the ARC-186 and take the planned break**. I have not set a date to return to that work.
 
 I’m focusing future support on aircraft with a **physical ARC-186 control panel** that matches my hardware, so the panel will be useful to builders flying those aircraft. I’ll compare the controls and displays as well as the radio model before deciding which aircraft to support.
 
