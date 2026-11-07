@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 2:36 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 2:40 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -21,13 +21,13 @@ I have requested the ARC-186 panel layout file from PC Flights. **Once I receive
 
 ## Current development order
 
-My overall build and testing order is the **A-10C II (A-10C2) ARC-210 implementation**, then the **ARC-164**, followed by the **ARC-186**. While I wait for the ARC-210 and ARC-164 PCBs, I am moving ahead with ARC-186 planning and design. After those projects, I’ll return to additional aircraft support, starting with the **ARC-210 and C-130J**. I’m focusing on aircraft with a matching physical radio panel.
+My overall build and testing order is the **A-10C II (A-10C2) ARC-210 implementation**, then the **ARC-164**, followed by the **ARC-186**. While I wait for the ARC-210 and ARC-164 PCBs, I am moving ahead with ARC-186 planning and design. Once the ARC-186 is finished, I plan to **take some time off from the radio projects and get back to other things I need to complete**. When I return to radio development, I would like to work on additional aircraft support, starting with the **ARC-210 and C-130J**. I’m focusing on aircraft with a matching physical radio panel.
 
 **This order may change based on user feedback and interest.** These are my current priorities, not fixed release dates.
 
 ## Other SIMPIT panels
 
-Once I’ve finished the radio panels, I plan to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans.
+After that break, I would also like to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans.
 
 ## Through-hole components
 
