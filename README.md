@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 2:43 PM MST (America/Denver)**
+**Last updated: November 8, 2026 at 7:41 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -13,6 +13,8 @@ This project is planned as a physical ARC-186 COMM-VHF radio panel for my DCS A-
 
 I chose the listed component suppliers because I’m aiming for better-quality parts than I generally expect from generic Amazon listings, even if they cost a little more. Parts from Amazon may work, and I use some myself, but substitutes may have different dimensions or pin spacing and may not fit the PCBs I plan to design for this project. Please compare the exact part specifications and PCB footprint before buying a substitute.
 
+
+I spend about **8 hours a day on my SIMPIT projects**, including working on the code, PCB design, assembly, and test fitting.
 ## Project update — November 7, 2026
 
 I am waiting for the **ARC-210 and ARC-164 PCBs to arrive**, so I am now working on the **ARC-186**. I am using this time to plan the controls, displays, and PCB arrangement.
