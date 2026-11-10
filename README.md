@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 8, 2026 at 7:41 AM MST (America/Denver)**
+**Last updated: November 9, 2026 at 9:44 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -160,6 +160,8 @@ The complete ARC-186 parts list and build cost are still being developed.
 ## USB connections and powered hubs
 
 [Read about the USB connection plan and purchased powered hubs](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/USB-Connections-and-Powered-Hubs.md) for why I am using USB instead of RS-485.
+
+I plan to use this [Veeloon Micro-USB male to USB-C female adapter cable](https://www.amazon.com/dp/B0G5YZJLVZ?th=1) for my Teensy 4.1 panels, and would use it here if I choose the Teensy alternative. **I still need to test it for programming, DCS-BIOS communication, and reliable operation.** My current ARC-186 plan uses the **classic Arduino Nano A000005**, which has a **Mini-B USB connector**, as shown in the [Arduino Nano documentation](https://docs.arduino.cc/hardware/nano/). **This Micro-USB adapter will not plug into that Nano; it would need a Mini-USB adapter instead.**
 
 ## DCS-BIOS
 
