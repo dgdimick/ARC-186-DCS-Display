@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 10:07 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 10:11 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -118,6 +118,8 @@ The ARC-186 will use **seven 7-segment LED displays in total**: five for the fre
 
 ### Control mounting and PCB plan
 
+I’m keeping my **existing smaller-hole ARC-186 panel** rather than buying a replacement with larger holes. I’m considering a **multilevel rotary-switch arrangement**, but **shaft/bushing fit, shaft reach, knob fit and clearances still need checking** before I finalize the layout.
+
 My current control plan is:
 
 | Control | Quantity | Planned type |
@@ -129,15 +131,15 @@ My current control plan is:
 
 That is **six planned rotary switches and one VOL encoder**, plus **one possible channel encoder**. This replaces the earlier five-frequency-encoder plan. The channel-wheel mechanism is still undecided, so I am not treating its encoder as a confirmed part yet.
 
-I plan to use **two separate PCBs for the four FREQ rotary switches**. This is the planned board arrangement for the frequency controls. I will probably also need **3D-printed shaft guides similar to those used on the ARC-210**. Their dimensions and mounting will be worked out during the fit checks. The switches can mount directly to the panel, but I still need to check clearance between the switch bodies, their two PCBs, and the frequency LED displays and display PCB before finalizing the layout.
+I’m considering **two separate PCBs at different mounting depths for the four FREQ rotary switches** as part of the possible multilevel arrangement. This is still a preliminary layout, subject to fit testing with my existing panel. I will probably also need **3D-printed shaft guides similar to those used on the ARC-210**. Their dimensions and mounting will be worked out during the fit checks. I still need to check whether the selected switch shafts and bushings fit the existing smaller holes, how the switches will be secured, and clearance between the switch bodies, their two PCBs, the frequency LED displays and display PCB before finalizing the layout.
 
 The seven display digits will have their own **display PCB**. I may also be able to mount the **VOL rotary encoder** on that board, depending on the available space and shaft alignment.
 
-The other **two rotary switches** are the **EMER/FM/AM selector** and **OFF/TR/DF selector**. I can mount both directly to the faceplate; the remaining mounting details still need checking.
+The other **two rotary switches** are the **EMER/FM/AM selector** and **OFF/TR/DF selector**. I still need to check their shaft/bushing fit in the existing smaller holes and their mounting depth, knob fit and clearances. Direct faceplate mounting is not confirmed yet.
 
 I would like to use a **small 3D-printed wheel for the preset channel control**, but **I may not be able to make it work in the available space**. The channel wheel is not a confirmed part of the design; if it proves impractical, I will need to find another way to select preset channels. I am considering a horizontally mounted rotary encoder, but the wheel is very small and **I still need to figure out how to mount and couple it to the encoder**. I will measure the wheel opening and clearance behind the panel before choosing a direct shaft connection, separate axle, or geared arrangement.
 
-The current mechanical plan includes **two FREQ switch PCBs and one separate display PCB**. I may also need **another PCB for the channel control and other components**, depending on the available space and how the channel mechanism works out. Its contents and mounting are still undecided, and the channel wheel itself is not yet confirmed as workable. This is not a final board count for the complete radio: the controller, driver, and any other board requirements still need to be worked out.
+The possible multilevel mechanical arrangement includes **two FREQ switch PCBs and one separate display PCB**. Shaft fit and clearances with my existing smaller-hole panel still need checking; the board arrangement is not finalized. I may also need **another PCB for the channel control and other components**, depending on the available space and how the channel mechanism works out. Its contents and mounting are still undecided, and the channel wheel itself is not yet confirmed as workable. This is not a final board count for the complete radio: the controller, driver, and any other board requirements still need to be worked out.
 
 These are preliminary plans. I will check the controls, board clearances, and printed parts together before publishing a build-ready design.
 
