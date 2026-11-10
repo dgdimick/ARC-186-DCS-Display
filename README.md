@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 9:46 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 10:07 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -35,14 +35,20 @@ After that break, I would also like to build other panels for my SIMPIT, includi
 
 While I could use surface-mount (SMD) parts to make the boards smaller, I plan to use through-hole components to make the project easier for everyone to build and solder with basic tools, following the same approach as my ARC-210 project.
 
+## Existing panel and rotary-switch mounting plan
+
+I’ll keep my existing ARC-186 panel with its **smaller holes**, rather than buy a replacement panel with larger holes. I’m considering a **multilevel rotary-switch setup**, with the switches and PCBs mounted at different depths to make room behind the panel.
+
+**This is still a possible arrangement, not a confirmed design.** I need to check the **switch shafts and bushings against the existing panel holes**, shaft reach and knob fit, any anti-rotation requirements, and clearances between the switches, PCBs, wiring and panel. I’ll test-fit the arrangement before committing to the PCB layout; mounting switches at different levels does not by itself confirm that they fit the existing holes.
+
 ## Things that need to be completed
 
-**Last updated: November 7, 2026 at 1:44 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 10:07 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
-1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, display choices, and the complete parts list.
+1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, display choices, and the complete parts list. Check shaft/bushing fit in my existing smaller-hole panel and test the possible multilevel rotary-switch arrangement, including shaft reach, knob fit and clearances before committing to the PCB layout.
 2. **PCB and schematic design:** Design the controller, encoder, switch, and display circuitry, including any display-driver level shifting needed for the chosen controller. Finalize the controller pin assignments and check the electrical design before ordering boards.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct AM/FM radio instance and configuration. The ARC-210 changes do not automatically apply to this panel.
