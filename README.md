@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 10:11 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 11:10 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -19,17 +19,17 @@ I spend about **8 hours a day on my SIMPIT projects**, including working on the 
 
 I am waiting for the **ARC-210 and ARC-164 PCBs to arrive**, so I am now working on the **ARC-186**. I am using this time to plan the controls, displays, and PCB arrangement.
 
-I have requested the ARC-186 panel layout file from PC Flights. **Once I receive it, I will start the PCB design**, using the drawing to line up the controls, displays, and mounting holes and check the available clearances.
+At that point, I had requested the ARC-186 panel layout file from PC Flights and planned to start PCB design when it arrived. **My priorities have since changed:** I’ll finish the ARC-164 PCBs, take a break from design work, and return to ARC-210 testing before resuming the ARC-186.
 
 ## Current development order
 
-My overall build and testing order is the **A-10C II (A-10C2) ARC-210 implementation**, then the **ARC-164**, followed by the **ARC-186**. While I wait for the ARC-210 and ARC-164 PCBs, I am moving ahead with ARC-186 planning and design. Once the ARC-186 is finished, I plan to **take some time off from the radio projects and get back to other things I need to complete**. When I return to radio development, I would like to work on additional aircraft support, starting with the **ARC-210 and C-130J**. I’m focusing on aircraft with a matching physical radio panel.
+I’ll **finish the ARC-164 PCBs**, then **take a break from design work and go back to testing the ARC-210**. **The ARC-186 and Version 2 plans can wait.** I haven’t set a date to return to those designs or additional aircraft support.
 
 **This order may change based on user feedback and interest.** These are my current priorities, not fixed release dates.
 
 ## Other SIMPIT panels
 
-After that break, I would also like to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans.
+Further down the road, I would also like to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans.
 
 ## Through-hole components
 
@@ -184,7 +184,7 @@ Follow the guide before replacing files. The ARC-210 patch does not add support 
 
 ## Physical radio panels and possible future support
 
-Any work on additional ARC-186 aircraft support would come **after I finish the ARC-186 and take the planned break**. I have not set a date to return to that work.
+Any work on additional ARC-186 aircraft support would come **after I return to this deferred project and finish the ARC-186**. My immediate plan is to finish the ARC-164 PCBs, pause design work and test the ARC-210. I have not set a date to return to ARC-186 development or additional aircraft support.
 
 I’m focusing future support on aircraft with a **physical ARC-186 control panel** that matches my hardware, so the panel will be useful to builders flying those aircraft. I’ll compare the controls and displays as well as the radio model before deciding which aircraft to support.
 
