@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 8:01 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 8:22 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -43,7 +43,7 @@ I’ll keep my existing ARC-186 panel with its **smaller holes**, rather than bu
 
 ## Things that need to be completed
 
-**Last updated: November 10, 2026 at 8:01 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 8:22 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
@@ -57,7 +57,7 @@ This is my current work list for the hardware, firmware, testing, and build inst
 7. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
 8. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes. Link to the shared [DCS-BIOS guide](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/DCS-BIOS.md) where the instructions already apply.
 9. **Assembly pictures:** When my PCBs arrive and I start building, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
-10. **USB identification:** Check whether the planned Arduino Nano’s USB-to-serial interface can report **ARC-186** as its USB product name. Test and document how to label the panel **ARC-186 (COMx)** in Windows Device Manager with administrator permissions. [ARC-210 Windows naming example](https://github.com/dgdimick/ARC-210-DCS-Display#arc-210-usb-name-in-windows).
+10. **USB identification:** Check whether the planned Arduino Nano’s USB-to-serial interface can report **ARC-186** as its USB product name. Use **ARC-186** as the planned bus description, subject to verifying support on the chosen USB interface. Test and document the optional **ARC-186 (COMx)** Windows Ports label change using administrator permissions. Programming and DCS-BIOS communication will work with the default Windows label. [ARC-210 Windows naming example](https://github.com/dgdimick/ARC-210-DCS-Display#arc-210-usb-name-in-windows).
 
 
 ## Assembly tool note
@@ -169,6 +169,8 @@ The complete ARC-186 parts list and build cost are still being developed.
 ## USB connections and powered hubs
 
 [Read about the USB connection plan and purchased powered hubs](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/USB-Connections-and-Powered-Hubs.md) for why I am using USB instead of RS-485.
+
+I plan to use **ARC-186** as the USB product name shown under **Device Manager → Properties → Details → Bus reported device description**. I still need to verify whether the USB-to-serial interface on the planned Nano supports that name and test the implementation. Renaming the Windows COM-port label to **ARC-186 (COMx)** through the registry is **optional**. The panel can be programmed and used with DCS-BIOS using the default Windows label. Select its assigned COM port in TekConnect, and check the assigned port again if you move it to another computer. [See the optional Windows naming example](https://github.com/dgdimick/ARC-210-DCS-Display#arc-210-usb-name-in-windows).
 
 ## DCS-BIOS
 
