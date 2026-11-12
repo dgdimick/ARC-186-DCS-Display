@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 12, 2026 at 3:11 AM MST (America/Denver)**
+**Last updated: November 12, 2026 at 3:12 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -19,7 +19,7 @@ I spend about **8 hours a day on my SIMPIT projects**, including working on the 
 
 I am waiting for the **ARC-210 and ARC-164 PCBs to arrive**, so I am now working on the **ARC-186**. I am using this time to plan the controls, displays, and PCB arrangement.
 
-At that point, I had requested the ARC-186 panel layout file from PC Flights and planned to start PCB design when it arrived. **My priorities have since changed:** I’ll finish the ARC-164 PCBs, take a break from design work, and return to ARC-210 testing before resuming the ARC-186.
+At that point, I had requested the ARC-186 panel layout file from PC Flights. They’ve since sent it to me. **My priorities have since changed:** I’ll finish the ARC-164 PCBs, take a break from design work, and return to ARC-210 testing before resuming the ARC-186.
 
 ## Current development order
 
@@ -238,7 +238,7 @@ I welcome bug reports from anyone using the project—**even tiny bugs are worth
 
 ## PC Flights affiliation
 
-I am not affiliated with PC Flights. I simply chose to use their panels for my own cockpit projects.
+I am not affiliated with PC Flights. I simply chose to use their panels for my own cockpit projects. Thanks to PC Flights for sending me the ARC-186 panel layout file. It’s helped me move the design along faster by giving me the locations of the controls, displays, and mounting holes.
 
 ---
 
