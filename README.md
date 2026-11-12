@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 11, 2026 at 9:22 PM MST (America/Denver)**
+**Last updated: November 12, 2026 at 3:11 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -212,11 +212,9 @@ References: [A-10C manual](https://www.digitalcombatsimulator.com/upload/iblock/
 - [ARC-210 DCS Display](https://github.com/dgdimick/ARC-210-DCS-Display)
 - [ARC-164 DCS Display](https://github.com/dgdimick/ARC-164-DCS-Display)
 
-## Parts offers for the ARC-210
+## Free 3D-printed parts
 
-See my [ARC-210 PCB and printed-parts offers](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/ARC-210-Parts-Offers.md) for current prices, what’s included, materials, availability, shipping, VAT, and import-charge details. If you request them with my ARC-210 PCB set, I’ll include the complete 3D-printed parts set free of charge. Shipping and handling remain separate.
-
-**These offers are for the ARC-210 only. I don’t currently offer PCB or printed-parts sets for the ARC-164 or ARC-186; their designs and testing are still to come.**
+If you don’t have a 3D printer, I’m happy to help with the ARC-186. Once the printed parts are finalized, I’ll print a set for you for free. Just cover shipping. I’m still designing the printed parts and need to test-fit them with the panel. If you’re planning a build, [get in touch in Discussions](https://github.com/dgdimick/ARC-186-DCS-Display/discussions) to check availability.
 
 ## A central directory for SIMPIT builders
 
