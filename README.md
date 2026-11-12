@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 8:22 PM MST (America/Denver)**
+**Last updated: November 11, 2026 at 9:22 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -30,6 +30,10 @@ I’ll **finish the ARC-164 PCBs**, then **take a break from design work and go 
 ## Other SIMPIT panels
 
 Further down the road, I would also like to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans.
+
+## 3D print settings
+
+For the planned printed parts, use a **0.20 mm or finer layer height**. The knobs are intended to print **without supports**. I’ll confirm the orientation and fit during test printing.
 
 ## Through-hole components
 
