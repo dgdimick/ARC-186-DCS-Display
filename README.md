@@ -1,6 +1,6 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 12, 2026 at 3:12 AM MST (America/Denver)**
+**Last updated: November 12, 2026 at 8:40 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -65,6 +65,8 @@ This is my current work list for the hardware, firmware, testing, and build inst
 
 
 ## Assembly tool note
+
+**New to soldering?** There are plenty of YouTube videos that show how to solder through-hole parts. A soldering practice kit is also a great way to get comfortable with the iron before you start on the radio boards. [Find soldering practice kits on Amazon](https://www.amazon.com/s?k=learn+soldering).
 
 I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on the rotary switches and encoders**. Use whichever socket fits each nut; the deep well provides clearance over the shaft.
 
