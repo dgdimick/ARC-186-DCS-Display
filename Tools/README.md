@@ -1,0 +1,74 @@
+# ARC-210 Windows USB display name utility
+
+**Last updated: November 13, 2026 at 11:09 PM MST (America/Denver)**
+
+These optional scripts set the display name for a serial device listed under **Ports (COM & LPT)** in Windows Device Manager. The default label is **ARC-210 (COMx)**. Use **-Name** or the interactive prompt to choose your own label for a Teensy, USB-to-serial adapter, or another serial device listed there. Windows keeps the assigned COM number.
+
+[Download the rename script](https://raw.githubusercontent.com/dgdimick/ARC-186-DCS-Display/main/Tools/Set-ARC210-USBName.ps1) · [Download the restore script](https://raw.githubusercontent.com/dgdimick/ARC-186-DCS-Display/main/Tools/Restore-ARC210-USBName.ps1)
+
+## TLDR:
+
+Download both scripts using the links above and save them in the same folder.
+
+Open **Windows PowerShell** as administrator in the folder where you saved the scripts. Replace **COM5** with the COM port you want to use and **ARC-210** with the **name** you want to use.
+
+- **Rename:**
+
+  `.\Set-ARC210-USBName.ps1 -Port COM5 -Name "ARC-210"`
+
+  - **Example:**
+
+    `.\Set-ARC210-USBName.ps1 -Port COM23 -Name "Left Console"`
+
+- **Remove the name:**
+
+  `.\Restore-ARC210-USBName.ps1 -Port COM5`
+
+  - **Example:**
+
+    `.\Restore-ARC210-USBName.ps1 -Port COM23`
+
+## How to rename or restore the port
+
+1. Download [Set-ARC210-USBName.ps1](Set-ARC210-USBName.ps1) and [Restore-ARC210-USBName.ps1](Restore-ARC210-USBName.ps1) into the same folder.
+2. If you have several devices and are unsure which COM port belongs to each one, unplug them and reconnect them one at a time. Check **Device Manager → Ports (COM & LPT)** after plugging in each device. If you want to change its port number, do that in Device Manager first. For example, if you change COM4 to COM23, run the rename script using **COM23**. Then repeat for the next device. If you already know which COM port each device uses in DCS-BIOS, you can use those port numbers directly.
+3. Open **Windows PowerShell** using **Run as administrator** and go to the folder where you saved the scripts. Substitute your port for COM5. For example, if your Teensy is on COM5, run the command below.
+
+```powershell
+.\Set-ARC210-USBName.ps1 -Port COM5
+```
+
+To use a different port and label, pass your COM number and put the name in quotes. In this example, Windows shows **Dummy Test (COM3)**.
+
+```powershell
+.\Set-ARC210-USBName.ps1 -Port COM3 -Name "Dummy Test"
+```
+
+![Windows Device Manager showing Dummy Test (COM3) under Ports (COM & LPT)](Device-Manager-Dummy-Test-COM3.png)
+
+The script adds the device’s COM number to the end of your label. If you already used the script to rename this device, restore its original name before applying another label.
+
+To undo the rename, enter the device's current COM number from the same administrator PowerShell window. For the COM3 example, use the command below.
+
+```powershell
+.\Restore-ARC210-USBName.ps1 -Port COM3
+```
+
+![Windows Device Manager showing the restored Standard Serial over Bluetooth link (COM3)](Device-Manager-Restored-COM3.png)
+
+Both scripts support COM port numbers above 9. If your device uses COM12, run the first command to rename it to **Left Console (COM12)**. Run the second command when you want to restore its original name.
+
+```powershell
+.\Set-ARC210-USBName.ps1 -Port COM12 -Name "Left Console"
+.\Restore-ARC210-USBName.ps1 -Port COM12
+```
+
+The set script saves the original registry value on the selected device instance. The restore script uses that backup to put the old label back, or uses **Serial Port (COMx)** when there was no original label (**USB Serial Device (COMx)** for a Teensy). A label already set manually before using the utility has no backup from this utility. Both scripts accept `-WhatIf` to preview the operation. Reopen Device Manager to refresh the displayed name.
+
+The rename script saves the backup with the device record. If Windows moves the same device from COM5 to COM17 and resets the label, rerun the rename script on COM17 with the same name. It reapplies the label and keeps the original backup. Run Restore on COM17 to put the original label back with the current port number. After a successful restore, the script deletes the backup from that device record. If Windows creates a new record, Restore looks for a single inactive record with the same hardware and Windows device container IDs. When it finds a match, it restores the original label and removes the backups from both records. If Windows changes those IDs or there is more than one matching old backup, the old backups stay in place.
+
+I moved my ARC-164 to a different USB port on the same PC, and Windows still showed **ARC-164 (COM4)**. Windows used the same device record in both USB ports.
+
+Run **.\Set-ARC210-USBName.ps1** with no arguments to enter the COM port and display name at the prompts. Press Enter at the name prompt to use **ARC-210**. Run **.\Restore-ARC210-USBName.ps1** with no arguments to enter just the COM port and restore its saved label. If Device Manager shows only **USB Serial Device**, check which port appears in TekConnect or DCSBridge when you plug in the Teensy.
+
+I tested both scripts on COM5. Windows showed **ARC-210 (COM5)** after renaming and **USB Serial Device (COM5)** after restoring. I also tested the custom name on a Bluetooth serial port with the Teensy unplugged. Windows showed **Dummy Test (COM3)** and then restored **Standard Serial over Bluetooth link (COM3)**.
