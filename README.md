@@ -1,7 +1,9 @@
 # ARC-186 Radio Panel for DCS
 
-**Last updated: November 12, 2026 at 8:40 PM MST (America/Denver)**
+**Last updated: November 13, 2026 at 11:34 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
+
+**[Windows COM port tools](Tools/README.md)** — Download the scripts to rename a COM port in Device Manager or restore its previous display name.
 
 <p align="center">
   <img src="images/ARC-186_comm_vhf_panel.jpg" width="600" alt="ARC-186 COMM-VHF radio panel from PC Flights">
